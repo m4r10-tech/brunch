@@ -58,6 +58,7 @@
       <nav id="menu" class="nav-links">
         <a href="#sin-gluten">Sin gluten</a>
         <a href="#carta">Carta</a>
+        <a href="#horario">Horario</a>
         <a href="#historia">Historia</a>
         <a href="#opiniones">Opiniones</a>
         <a href="#visitanos" class="btn btn-small">Visítanos</a>
@@ -70,6 +71,7 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
+          <a href="#horario" class="status" data-status hidden><span class="status-dot"></span><span class="status-text"></span></a>
           <p class="eyebrow">Toledo · desde 1856</p>
           <h1>El sabor de siempre,<br><em>100% sin gluten</em></h1>
           <p class="lead">
@@ -165,12 +167,16 @@
                 <path d="M112 86l8-10M120 88l6-10M128 86l4-8" stroke="#a8682a" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3>Desayunos</h3>
-            <ul>
-              <li>Café, chocolate e infusiones</li>
-              <li>Batidos</li>
-              <li>Tostadas con pan sin gluten</li>
-              <li>Croissants y napolitanas recién hechos</li>
+            <h3>Desayunos y bollería</h3>
+            <ul class="price-list">
+              <li><span>Croissant</span><b>1,90 €</b></li>
+              <li><span>Napolitana de chocolate</span><b>1,95 €</b></li>
+              <li><span>Palmera grande de chocolate</span><b>2,75 €</b></li>
+              <li><span>Caña de crema o de chocolate</span><b>2,65 €</b></li>
+              <li><span>Berlina de chocolate</span><b>2,20 €</b></li>
+              <li><span>Suizo</span><b>1,60 €</b></li>
+              <li><span>Magdalena</span><b>0,90 €</b></li>
+              <li><span>Palmeritas mini (hojaldre o chocolate)</span><b>24,00 €/kg</b></li>
             </ul>
           </article>
 
@@ -184,12 +190,15 @@
                 <path d="M46 52c10-8 24-6 32 0M82 50c10-6 22-6 30 2" fill="none" stroke="#3b2a1e" stroke-width="5" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3>Bollería y postres</h3>
-            <ul>
-              <li>Palmeras de chocolate</li>
-              <li>Hojaldre crujiente, por capas</li>
-              <li>Pastas y mantecados de canela</li>
-              <li>Torrijas en temporada</li>
+            <h3>Postres y tartas</h3>
+            <ul class="price-list">
+              <li><span>Postre de San Marcos</span><b>3,30 €</b></li>
+              <li><span>Postre de hojaldre con frutas</span><b>4,40 €</b></li>
+              <li><span>Bocaditos de nata</span><b>desde 5,43 €</b></li>
+              <li><span>Tira de hojaldre con fruta</span><b>24,75 €</b></li>
+              <li><span>Tarta de nata</span><b>26,40 €/kg</b></li>
+              <li><span>Tarta San Marcos</span><b>26,40 €/kg</b></li>
+              <li><span>Tarta red velvet</span><b>28,00 €/kg</b></li>
             </ul>
           </article>
 
@@ -207,11 +216,15 @@
               </svg>
             </div>
             <h3>Mazapán</h3>
-            <ul>
-              <li>Mazapán surtido y figuritas</li>
-              <li>Mazapanes de piñones</li>
-              <li>Rellenos de yema y cabello de ángel</li>
-              <li>Anguilas de mazapán para Navidad</li>
+            <ul class="price-list">
+              <li><span>Pez de mazapán</span><b>6,05 €</b></li>
+              <li><span>Toledanas</span><b>desde 7,64 €</b></li>
+              <li><span>Mazapán surtido · 200 g</span><b>8,25 €</b></li>
+              <li><span>Mazapán surtido · 800 g</span><b>33,00 €</b></li>
+              <li><span>Figuritas de mazapán</span><b>desde 8,25 €</b></li>
+              <li><span>Delicias de mazapán</span><b>desde 9,35 €</b></li>
+              <li><span>Rosquillas de Alcalá</span><b>desde 6,60 €</b></li>
+              <li><span>Anguilas</span><b>desde 25,30 €</b></li>
             </ul>
           </article>
 
@@ -225,20 +238,53 @@
                 <path d="M60 62l8 6M78 54l8 6M96 62l8 6" stroke="#a8682a" stroke-width="2.5" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3>Salado</h3>
-            <ul>
-              <li>Empanadas caseras</li>
-              <li>Sándwiches</li>
-              <li>Ensaladas</li>
-              <li>Pan sin gluten para llevar</li>
+            <h3>Pan y salado</h3>
+            <ul class="price-list">
+              <li><span>Pan común</span><b>1,30 €</b></li>
+              <li><span>Pan chapata</span><b>2,30 €</b></li>
+              <li><span>Pan de hogaza</span><b>2,30 €</b></li>
+              <li><span>Empanadilla de atún</span><b>1,90 €</b></li>
+              <li><span>Empanada de atún (entera)</span><b>26,40 €</b></li>
+              <li><span>Empanada de pollo (entera)</span><b>26,40 €</b></li>
             </ul>
           </article>
         </div>
+        <p class="menu-foot">
+          En cafetería: cafés, chocolate, infusiones, batidos y zumos para acompañar.<br>
+          Precios con IVA incluido. Tartas por encargo en tamaños para 4–6 y 6–8 personas.
+        </p>
+      </div>
+    </section>
+
+    <!-- HORARIO -->
+    <section id="horario" class="section">
+      <div class="container hours-wrap">
+        <div class="hours-intro">
+          <p class="eyebrow">Horario</p>
+          <h2>Abrimos todos los días del año</h2>
+          <p>De lunes a domingo, festivos incluidos, sin cerrar a mediodía. Ven a desayunar, a por el pan o a merendar.</p>
+          <div class="status status-lg" data-status hidden><span class="status-dot"></span><span class="status-text"></span></div>
+          <div class="hero-actions">
+            <a class="btn btn-wa" href="https://wa.me/34925690004?text=Hola%2C%20quer%C3%ADa%20hacer%20una%20consulta." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Escríbenos por WhatsApp</a>
+          </div>
+        </div>
+        <table class="week" aria-label="Horario semanal">
+          <tbody>
+            <tr data-day="1"><th scope="row">Lunes</th><td>8:30 – 21:00</td></tr>
+            <tr data-day="2"><th scope="row">Martes</th><td>8:30 – 21:00</td></tr>
+            <tr data-day="3"><th scope="row">Miércoles</th><td>8:30 – 21:00</td></tr>
+            <tr data-day="4"><th scope="row">Jueves</th><td>8:30 – 21:00</td></tr>
+            <tr data-day="5"><th scope="row">Viernes</th><td>8:30 – 21:00</td></tr>
+            <tr data-day="6"><th scope="row">Sábado</th><td>8:30 – 21:00</td></tr>
+            <tr data-day="0"><th scope="row">Domingo</th><td>8:30 – 21:00</td></tr>
+            <tr class="holiday"><th scope="row">Festivos</th><td>8:30 – 21:00</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <!-- HISTORIA -->
-    <section id="historia" class="section">
+    <section id="historia" class="section section-alt">
       <div class="container story">
         <div class="story-year" aria-hidden="true">
           <span>1856</span>
@@ -265,7 +311,7 @@
     </section>
 
     <!-- OPINIONES -->
-    <section id="opiniones" class="section section-alt">
+    <section id="opiniones" class="section">
       <div class="container">
         <header class="section-head">
           <p class="eyebrow">Lo que dicen nuestros clientes</p>
@@ -293,7 +339,7 @@
     </section>
 
     <!-- VISÍTANOS -->
-    <section id="visitanos" class="section">
+    <section id="visitanos" class="section section-alt">
       <div class="container visit">
         <div class="visit-info">
           <p class="eyebrow">Te esperamos</p>
@@ -303,6 +349,8 @@
             <dd>Av. de Irlanda, 3<br>45005 Toledo</dd>
             <dt>Teléfono</dt>
             <dd><a href="tel:+34925690004">925 69 00 04</a></dd>
+            <dt>WhatsApp</dt>
+            <dd><a href="https://wa.me/34925690004?text=Hola%2C%20quer%C3%ADa%20hacer%20una%20consulta." target="_blank" rel="noopener">Escríbenos un mensaje</a></dd>
             <dt>Horario</dt>
             <dd class="hours">
               <span>Lunes a domingo y festivos</span><span>8:30 – 21:00</span>
@@ -310,7 +358,7 @@
           </dl>
           <div class="hero-actions">
             <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Brunch+Confiteria+Santo+Tome+Av.+de+Irlanda+3+Toledo" target="_blank" rel="noopener">Cómo llegar</a>
-            <a class="btn btn-ghost" href="tel:+34925690004">Hacer un encargo</a>
+            <a class="btn btn-wa" href="https://wa.me/34925690004?text=Hola%2C%20quer%C3%ADa%20hacer%20un%20encargo." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Hacer un encargo</a>
           </div>
         </div>
         <div class="map">
@@ -330,13 +378,13 @@
         <span><strong>Brunch</strong><small>Santo Tomé</small></span>
       </div>
       <p>Obrador y cafetería 100% sin gluten · Toledo</p>
-      <p><a href="https://www.instagram.com/brunchsantotome/" target="_blank" rel="noopener">Instagram</a> · <a href="tel:+34925690004">925 69 00 04</a></p>
+      <p><a href="https://www.instagram.com/brunchsantotome/" target="_blank" rel="noopener">Instagram</a> · <a href="https://wa.me/34925690004?text=Hola%2C%20quer%C3%ADa%20hacer%20una%20consulta." target="_blank" rel="noopener">WhatsApp</a> · <a href="tel:+34925690004">925 69 00 04</a></p>
     </div>
     <p class="copy">© <span id="year"></span> Brunch Confitería Santo Tomé</p>
   </footer>
 
-  <a class="fab" href="tel:+34925690004" aria-label="Llamar a Brunch Santo Tomé">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+  <a class="fab" href="https://wa.me/34925690004?text=Hola%2C%20quer%C3%ADa%20hacer%20una%20consulta." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp a Brunch Santo Tomé">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
   </a>
 
   <script src="main.js"></script>
