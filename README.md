@@ -10,7 +10,8 @@ Con internet se cargan las fuentes y el mapa de Google.
 - Dirección, teléfono 925 69 00 04 e Instagram @brunchsantotome.
 - Horario: lunes a domingo y festivos, 8:30–21:00 (según la web de contacto del negocio).
 - Historia desde 1856, apertura del Brunch en 2019, certificación Espiga Barrada, receta del mazapán (57% almendra Marcona).
-- Precios de la carta: tienda online del negocio (mazapansingluten.com), IVA incluido.
+- Carta de cafetería (bebidas, combos, bocatines, tostas, flanes, empanadas, helados): carta física del local (fotos de Google Maps).
+- Bollería, tartas, pan y mazapán: tienda online del negocio (mazapansingluten.com), IVA incluido.
 - Opiniones: extraídos de reseñas públicas (Google 4,6 con más de 400 opiniones, Tripadvisor).
 
 ## Logo e iconos
@@ -25,7 +26,7 @@ Con internet se cargan las fuentes y el mapa de Google.
 
 ## Mejoras cuando el cliente confirme
 - **Confirmar el número de WhatsApp** (ahora se usa el fijo 925 69 00 04; si tienen otro móvil, cambiarlo en `index.html`).
-- Precios de cafetería (cafés, batidos…), que no están publicados.
+- Añadir **tortitas y postres individuales** de la carta (la foto disponible no se lee bien).
 - Fotos reales del local y los productos (galería).
 - Dominio propio y despliegue en VPS. Al tener dominio, poner la URL absoluta en `og:image`
   (`https://dominio/assets/og-image.png`) para que la vista previa salga en WhatsApp y redes.

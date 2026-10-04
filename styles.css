@@ -196,28 +196,43 @@ em { font-style: italic; color: var(--brand); }
 .center { text-align: center; }
 
 /* Menu */
-.menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-.menu-card {
+.tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin-bottom: 28px; }
+.tabs button {
+  font: inherit; font-weight: 500;
+  padding: .6rem 1.3rem;
+  border-radius: 999px;
+  border: 1px solid var(--almond);
+  background: #fff;
+  color: var(--cocoa-2);
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s;
+}
+.tabs button:hover { border-color: var(--brand); color: var(--brand); }
+.tabs button[aria-selected="true"] { background: var(--brand); border-color: var(--brand); color: #fff; }
+.menu-panel {
   background: #fff;
   border-radius: var(--radius);
-  padding: 24px 28px 20px;
   box-shadow: var(--shadow);
   border: 1px solid rgba(232, 211, 176, .6);
+  padding: 32px 36px;
   display: grid;
-  grid-template-columns: 150px minmax(0, 1fr);
-  min-width: 0;
-  gap: 4px 24px;
+  grid-template-columns: 170px minmax(0, 1fr) minmax(0, 1fr);
+  gap: 40px;
   align-items: start;
 }
-.menu-card h3 { grid-column: 2; margin: 4px 0 6px; }
-.menu-art { grid-row: 1 / span 2; background: var(--cream); border-radius: 12px; }
+.menu-panel[hidden] { display: none; }
+.menu-art { background: var(--cream); border-radius: 14px; }
 .menu-art svg { width: 100%; height: auto; display: block; }
-.price-list { grid-column: 2; list-style: none; margin: 0; padding: 0; }
-.price-list li { display: flex; align-items: baseline; gap: 8px; padding: 7px 0; color: var(--cocoa-2); font-size: .95rem; }
-.price-list li::after { content: none; }
+.menu-col h3 { margin: 0 0 8px; }
+.price-list { list-style: none; margin: 0; padding: 0; }
+.price-list li { display: flex; align-items: baseline; gap: 8px; padding: 8px 0; color: var(--cocoa-2); font-size: .95rem; }
 .price-list span { flex: 0 1 auto; }
-.price-list li::before { content: ""; order: 1; flex: 1 1 auto; border-bottom: 1px dotted var(--almond); transform: translateY(-4px); min-width: 12px; }
+.price-list span small { display: block; color: var(--muted); font-size: .8rem; line-height: 1.35; margin-top: 2px; }
+.price-list li::before { content: ""; order: 1; flex: 1 1 auto; border-bottom: 1px dotted var(--almond); transform: translateY(-4px); min-width: 12px; align-self: flex-start; margin-top: 1.05em; }
 .price-list b { order: 2; font-weight: 600; color: var(--cocoa); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.price-list li.sub { display: block; margin-top: 14px; padding: 0 0 2px; font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--brand); }
+.price-list li.sub::before { content: none; }
+.extras { margin: 12px 0 0; padding: 12px 14px; background: var(--cream); border-radius: 10px; font-size: .82rem; color: var(--muted); line-height: 1.5; }
 .menu-foot { text-align: center; color: var(--muted); font-size: .9rem; margin: 32px 0 0; }
 
 /* Estado abierto / cerrado */
@@ -353,15 +368,16 @@ em { font-style: italic; color: var(--brand); }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .hero-grid, .story, .visit, .hours-wrap, .menu-grid { grid-template-columns: 1fr; }
+  .hero-grid, .story, .visit, .hours-wrap { grid-template-columns: 1fr; }
+  .menu-panel { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px 32px; }
+  .menu-art { grid-column: 1 / -1; max-width: 200px; justify-self: center; width: 100%; }
   .hero-art { max-width: 340px; order: -1; }
   .features, .quotes { grid-template-columns: 1fr; }
   .story-year { max-width: 320px; aspect-ratio: 1; border-radius: var(--radius); }
 }
 @media (max-width: 560px) {
-  .menu-card { grid-template-columns: minmax(0, 1fr); }
-  .menu-card h3, .price-list { grid-column: 1; }
-  .menu-art { grid-row: auto; max-width: 220px; }
+  .menu-panel { grid-template-columns: minmax(0, 1fr); padding: 24px 20px; }
+  .tabs button { padding: .5rem 1rem; font-size: .9rem; }
   .week th, .week td { padding: 12px 18px; }
 }
 @media (max-width: 760px) {

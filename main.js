@@ -13,8 +13,29 @@ menu.querySelectorAll('a').forEach((a) =>
   })
 );
 
+// Pestañas de la carta
+const tabs = [...document.querySelectorAll('[role="tab"]')];
+function selectTab(tab) {
+  tabs.forEach((t) => {
+    const selected = t === tab;
+    t.setAttribute('aria-selected', String(selected));
+    t.tabIndex = selected ? 0 : -1;
+    document.getElementById(t.getAttribute('aria-controls')).hidden = !selected;
+  });
+}
+tabs.forEach((tab, i) => {
+  tab.addEventListener('click', () => selectTab(tab));
+  tab.addEventListener('keydown', (e) => {
+    const next = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+    if (!next) return;
+    const target = tabs[(i + next + tabs.length) % tabs.length];
+    selectTab(target);
+    target.focus();
+  });
+});
+
 // Animación al hacer scroll
-const revealables = document.querySelectorAll('.feature, .section-head, .menu-card, .story > *, .quotes blockquote, .visit > *, .hours-wrap > *');
+const revealables = document.querySelectorAll('.feature, .section-head, .menu-panel, .story > *, .quotes blockquote, .visit > *, .hours-wrap > *');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

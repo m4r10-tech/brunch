@@ -154,9 +154,15 @@
           <p>Todo sin gluten, de lo dulce a lo salado. Pregunta en barra por las especialidades del día.</p>
         </header>
 
-        <div class="menu-grid">
-          <article class="menu-card">
-            <div class="menu-art" aria-hidden="true">
+        <div class="tabs" role="tablist" aria-label="Secciones de la carta">
+          <button role="tab" id="t-desayunos" aria-controls="p-desayunos" aria-selected="true">Desayunos</button>
+          <button role="tab" id="t-bebidas" aria-controls="p-bebidas" aria-selected="false" tabindex="-1">Bebidas</button>
+          <button role="tab" id="t-salado" aria-controls="p-salado" aria-selected="false" tabindex="-1">Salado</button>
+          <button role="tab" id="t-dulce" aria-controls="p-dulce" aria-selected="false" tabindex="-1">Dulce</button>
+          <button role="tab" id="t-mazapan" aria-controls="p-mazapan" aria-selected="false" tabindex="-1">Mazapán</button>
+        </div>
+        <div class="menu-panel" role="tabpanel" id="p-desayunos" aria-labelledby="t-desayunos">
+          <div class="menu-art" aria-hidden="true">
               <svg viewBox="0 0 160 120">
                 <ellipse cx="80" cy="96" rx="64" ry="12" fill="#e8d3b0"/>
                 <path d="M44 52h52v22a24 24 0 0 1-24 24h-4a24 24 0 0 1-24-24z" fill="#fff" stroke="#3b2a1e" stroke-width="3"/>
@@ -166,8 +172,119 @@
                 <path d="M104 92c4-16 18-26 34-22-2 14-16 26-34 22z" fill="#d9963f"/>
                 <path d="M112 86l8-10M120 88l6-10M128 86l4-8" stroke="#a8682a" stroke-width="2" stroke-linecap="round"/>
               </svg>
-            </div>
-            <h3>Desayunos y bollería</h3>
+          </div>
+          <div class="menu-col">
+            <h3>Combos de desayuno</h3>
+            <ul class="price-list">
+              <li><span>Santo Tomé<small>Café o té clásico + tostada</small></span><b>2,75 €</b></li>
+              <li><span>Santo Tomé con jamón<small>Café o té clásico + tostada de jamón</small></span><b>4,25 €</b></li>
+              <li><span>Casco Histórico<small>Café o té clásico + croissant a la plancha</small></span><b>3,00 €</b></li>
+            </ul>
+            <p class="extras">Cambia la bebida: refresco o té matcha +1,30 € · capuchino o café bombón +0,30 € · zumo de melocotón o piña +0,70 €. Añade zumo de naranja natural por +2,20 €.</p>
+          </div>
+          <div class="menu-col">
+            <h3>Cafés, tés y chocolate</h3>
+            <ul class="price-list">
+              <li><span>Café solo o cortado</span><b>1,40 €</b></li>
+              <li><span>Café con leche</span><b>1,50 €</b></li>
+              <li><span>Café capuchino</span><b>1,80 €</b></li>
+              <li><span>Café bombón</span><b>1,80 €</b></li>
+              <li><span>Vaso de leche</span><b>1,60 €</b></li>
+              <li><span>Nesquik</span><b>1,70 €</b></li>
+              <li><span>Chocolate a la taza</span><b>3,00 €</b></li>
+              <li><span>Té clásico<small>Rojo, negro, verde, menta o rooibos</small></span><b>1,40 €</b></li>
+              <li><span>Té de especialidad</span><b>2,20 €</b></li>
+              <li><span>Té matcha</span><b>2,50 €</b></li>
+              <li><span>Té matcha latte</span><b>3,00 €</b></li>
+              <li><span>Zumo de naranja natural</span><b>3,00 €</b></li>
+            </ul>
+            <p class="extras">Para llevar +0,15 € · Doble de café +0,50 € · Leche sin lactosa o de soja +0,10 €</p>
+          </div>
+        </div>
+        <div class="menu-panel" role="tabpanel" id="p-bebidas" aria-labelledby="t-bebidas" hidden>
+          <div class="menu-art" aria-hidden="true">
+              <svg viewBox="0 0 160 120">
+                <ellipse cx="80" cy="102" rx="64" ry="10" fill="#e8d3b0"/>
+                <path d="M60 30h40l-6 70H66z" fill="#fff" stroke="#3b2a1e" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M62 52h36l-4 46H66z" fill="#f2a7c3"/>
+                <path d="M58 30c2-10 10-14 22-14s20 4 22 14z" fill="#fff" stroke="#3b2a1e" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M88 18l14-14" stroke="#c91362" stroke-width="5" stroke-linecap="round"/>
+                <circle cx="80" cy="14" r="5" fill="#c91362"/>
+              </svg>
+          </div>
+          <div class="menu-col">
+            <h3>Batidos</h3>
+            <ul class="price-list">
+              <li><span>Batido<small>Fresa, chocolate, chocolate blanco, nata o vainilla. Sin lactosa</small></span><b>5,00 €</b></li>
+            </ul>
+          </div>
+          <div class="menu-col">
+            <h3>Refrescos y cervezas</h3>
+            <ul class="price-list">
+              <li><span>Agua mineral</span><b>1,60 €</b></li>
+              <li><span>Agua mineral con gas</span><b>2,60 €</b></li>
+              <li><span>Aquarius<small>Naranja o limón</small></span><b>3,00 €</b></li>
+              <li><span>Coca-Cola</span><b>3,00 €</b></li>
+              <li><span>Nestea limón</span><b>3,00 €</b></li>
+              <li><span>Trinaranjus<small>Naranja o limón</small></span><b>2,50 €</b></li>
+              <li><span>Tónica</span><b>2,20 €</b></li>
+              <li><span>Mahou 5 Estrellas o Clásica 1/3</span><b>3,00 €</b></li>
+              <li><span>Mahou 5 Estrellas o Clásica 1/5</span><b>1,80 €</b></li>
+              <li><span>Mahou Tostada 1/3</span><b>3,00 €</b></li>
+              <li><span>Mahou Sin Gluten 1/3</span><b>3,00 €</b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="menu-panel" role="tabpanel" id="p-salado" aria-labelledby="t-salado" hidden>
+          <div class="menu-art" aria-hidden="true">
+              <svg viewBox="0 0 160 120">
+                <ellipse cx="80" cy="96" rx="64" ry="12" fill="#e8d3b0"/>
+                <path d="M32 88a48 48 0 0 1 96 0z" fill="#dda25a"/>
+                <path d="M32 88a48 48 0 0 1 96 0" fill="none" stroke="#a8682a" stroke-width="3"/>
+                <path d="M36 88q6-6 12 0t12 0 12 0 12 0 12 0 12 0 12 0 8 0" fill="none" stroke="#a8682a" stroke-width="3" stroke-linecap="round"/>
+                <path d="M60 62l8 6M78 54l8 6M96 62l8 6" stroke="#a8682a" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+          </div>
+          <div class="menu-col">
+            <h3>Bocatines y tostas</h3>
+            <ul class="price-list">
+              <li><span>Bocatín de salmón<small>Salmón ahumado y crema de cabrales</small></span><b>3,60 €</b></li>
+              <li><span>Bocatín de jamón<small>Jamón ibérico, tomate y aceite de oliva</small></span><b>5,00 €</b></li>
+              <li><span>Tosta de jamón ibérico<small>Tomate natural, jamón ibérico y aceite de oliva</small></span><b>8,50 €</b></li>
+              <li><span>Tosta de lomo de orza<small>Lomo de orza, queso brie y cebolla caramelizada</small></span><b>7,15 €</b></li>
+              <li class="sub">Flanes salados · 2 uds.</li>
+              <li><span>Flan de pollo<small>Huevo, pechuga de pollo y mozzarella</small></span><b>5,90 €</b></li>
+              <li><span>Flan de setas<small>Huevo, setas y mozzarella</small></span><b>5,90 €</b></li>
+            </ul>
+          </div>
+          <div class="menu-col">
+            <h3>Empanadas y hojaldres</h3>
+            <ul class="price-list">
+              <li><span>Empanadilla de atún</span><b>1,90 €</b></li>
+              <li><span>Empanada de atún<small>Ración</small></span><b>1,90 €</b></li>
+              <li><span>Empanada de pollo<small>Ración</small></span><b>1,90 €</b></li>
+              <li><span>Roll vegetal al pesto</span><b>1,50 €</b></li>
+              <li><span>Tartaleta de hojaldre con salmón y espinacas<small>Ración</small></span><b>3,50 €</b></li>
+              <li><span>Tartaleta de hojaldre con jamón york y queso brie<small>Ración</small></span><b>3,50 €</b></li>
+              <li class="sub">Para llevar</li>
+              <li><span>Empanada entera de atún o de pollo</span><b>26,40 €</b></li>
+              <li><span>Pan común</span><b>1,30 €</b></li>
+              <li><span>Pan chapata o de hogaza</span><b>2,30 €</b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="menu-panel" role="tabpanel" id="p-dulce" aria-labelledby="t-dulce" hidden>
+          <div class="menu-art" aria-hidden="true">
+              <svg viewBox="0 0 160 120">
+                <ellipse cx="80" cy="96" rx="64" ry="12" fill="#e8d3b0"/>
+                <path d="M80 92C50 92 36 72 44 54c6-14 26-16 34-4 8-12 28-10 34 4 8 18-6 38-32 38z" fill="#e2a95a"/>
+                <path d="M80 92C56 92 46 76 52 62c4-10 18-10 24-2l4 6 4-6c6-8 20-8 24 2 6 14-4 30-28 30z" fill="none" stroke="#b9772e" stroke-width="2.5"/>
+                <path d="M80 92C50 92 36 72 44 54c6-14 26-16 34-4 8-12 28-10 34 4 8 18-6 38-32 38z" fill="#5a3320" opacity=".85" clip-path="inset(0 0 55% 0)"/>
+                <path d="M46 52c10-8 24-6 32 0M82 50c10-6 22-6 30 2" fill="none" stroke="#3b2a1e" stroke-width="5" stroke-linecap="round"/>
+              </svg>
+          </div>
+          <div class="menu-col">
+            <h3>Bollería</h3>
             <ul class="price-list">
               <li><span>Croissant</span><b>1,90 €</b></li>
               <li><span>Napolitana de chocolate</span><b>1,95 €</b></li>
@@ -176,34 +293,26 @@
               <li><span>Berlina de chocolate</span><b>2,20 €</b></li>
               <li><span>Suizo</span><b>1,60 €</b></li>
               <li><span>Magdalena</span><b>0,90 €</b></li>
-              <li><span>Palmeritas mini (hojaldre o chocolate)</span><b>24,00 €/kg</b></li>
+              <li><span>Palmeritas mini<small>Hojaldre o chocolate</small></span><b>24,00 €/kg</b></li>
             </ul>
-          </article>
-
-          <article class="menu-card">
-            <div class="menu-art" aria-hidden="true">
-              <svg viewBox="0 0 160 120">
-                <ellipse cx="80" cy="96" rx="64" ry="12" fill="#e8d3b0"/>
-                <path d="M80 92C50 92 36 72 44 54c6-14 26-16 34-4 8-12 28-10 34 4 8 18-6 38-32 38z" fill="#e2a95a"/>
-                <path d="M80 92C56 92 46 76 52 62c4-10 18-10 24-2l4 6 4-6c6-8 20-8 24 2 6 14-4 30-28 30z" fill="none" stroke="#b9772e" stroke-width="2.5"/>
-                <path d="M80 92C50 92 36 72 44 54c6-14 26-16 34-4 8-12 28-10 34 4 8 18-6 38-32 38z" fill="#5a3320" opacity=".85" clip-path="inset(0 0 55% 0)"/>
-                <path d="M46 52c10-8 24-6 32 0M82 50c10-6 22-6 30 2" fill="none" stroke="#3b2a1e" stroke-width="5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Postres y tartas</h3>
+          </div>
+          <div class="menu-col">
+            <h3>Helados y tartas</h3>
             <ul class="price-list">
-              <li><span>Postre de San Marcos</span><b>3,30 €</b></li>
-              <li><span>Postre de hojaldre con frutas</span><b>4,40 €</b></li>
-              <li><span>Bocaditos de nata</span><b>desde 5,43 €</b></li>
-              <li><span>Tira de hojaldre con fruta</span><b>24,75 €</b></li>
+              <li><span>Helado de 1 bola</span><b>3,00 €</b></li>
+              <li><span>Helado de 2 bolas</span><b>4,00 €</b></li>
+              <li><span>Helado de 3 bolas</span><b>5,00 €</b></li>
+              <li class="sub">Tartas por encargo</li>
               <li><span>Tarta de nata</span><b>26,40 €/kg</b></li>
               <li><span>Tarta San Marcos</span><b>26,40 €/kg</b></li>
               <li><span>Tarta red velvet</span><b>28,00 €/kg</b></li>
+              <li><span>Tira de hojaldre con fruta</span><b>24,75 €</b></li>
             </ul>
-          </article>
-
-          <article class="menu-card">
-            <div class="menu-art" aria-hidden="true">
+            <p class="extras">Tartas en tamaño para 4–6 o 6–8 personas. Encárgalas por teléfono o WhatsApp.</p>
+          </div>
+        </div>
+        <div class="menu-panel" role="tabpanel" id="p-mazapan" aria-labelledby="t-mazapan" hidden>
+          <div class="menu-art" aria-hidden="true">
               <svg viewBox="0 0 160 120">
                 <ellipse cx="80" cy="96" rx="64" ry="12" fill="#e8d3b0"/>
                 <path d="M30 88c10-30 40-40 60-30 14 7 28 4 40-6-2 24-26 40-56 40-16 0-30-2-44-4z" fill="#f2d39e"/>
@@ -214,45 +323,29 @@
                 <circle cx="76" cy="40" r="8" fill="#f2d39e" stroke="#c99550" stroke-width="2"/>
                 <circle cx="49" cy="47" r="1.5" fill="#c99550"/><circle cx="55" cy="47" r="1.5" fill="#c99550"/>
               </svg>
-            </div>
-            <h3>Mazapán</h3>
+          </div>
+          <div class="menu-col">
+            <h3>Mazapán de Toledo</h3>
             <ul class="price-list">
-              <li><span>Pez de mazapán</span><b>6,05 €</b></li>
-              <li><span>Toledanas</span><b>desde 7,64 €</b></li>
               <li><span>Mazapán surtido · 200 g</span><b>8,25 €</b></li>
               <li><span>Mazapán surtido · 800 g</span><b>33,00 €</b></li>
               <li><span>Figuritas de mazapán</span><b>desde 8,25 €</b></li>
               <li><span>Delicias de mazapán</span><b>desde 9,35 €</b></li>
-              <li><span>Rosquillas de Alcalá</span><b>desde 6,60 €</b></li>
+              <li><span>Pez de mazapán</span><b>6,05 €</b></li>
               <li><span>Anguilas</span><b>desde 25,30 €</b></li>
             </ul>
-          </article>
-
-          <article class="menu-card">
-            <div class="menu-art" aria-hidden="true">
-              <svg viewBox="0 0 160 120">
-                <ellipse cx="80" cy="96" rx="64" ry="12" fill="#e8d3b0"/>
-                <path d="M32 88a48 48 0 0 1 96 0z" fill="#dda25a"/>
-                <path d="M32 88a48 48 0 0 1 96 0" fill="none" stroke="#a8682a" stroke-width="3"/>
-                <path d="M36 88q6-6 12 0t12 0 12 0 12 0 12 0 12 0 12 0 8 0" fill="none" stroke="#a8682a" stroke-width="3" stroke-linecap="round"/>
-                <path d="M60 62l8 6M78 54l8 6M96 62l8 6" stroke="#a8682a" stroke-width="2.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>Pan y salado</h3>
+          </div>
+          <div class="menu-col">
+            <h3>Dulces típicos</h3>
             <ul class="price-list">
-              <li><span>Pan común</span><b>1,30 €</b></li>
-              <li><span>Pan chapata</span><b>2,30 €</b></li>
-              <li><span>Pan de hogaza</span><b>2,30 €</b></li>
-              <li><span>Empanadilla de atún</span><b>1,90 €</b></li>
-              <li><span>Empanada de atún (entera)</span><b>26,40 €</b></li>
-              <li><span>Empanada de pollo (entera)</span><b>26,40 €</b></li>
+              <li><span>Toledanas</span><b>desde 7,64 €</b></li>
+              <li><span>Rosquillas de Alcalá</span><b>desde 6,60 €</b></li>
+              <li><span>Bocaditos de nata</span><b>desde 5,43 €</b></li>
             </ul>
-          </article>
+            <p class="extras">Elaborado con 57% de almendra Marcona, azúcar y miel. Certificado sin gluten Espiga Barrada.</p>
+          </div>
         </div>
-        <p class="menu-foot">
-          En cafetería: cafés, chocolate, infusiones, batidos y zumos para acompañar.<br>
-          Precios con IVA incluido. Tartas por encargo en tamaños para 4–6 y 6–8 personas.
-        </p>
+        <p class="menu-foot">Todos los precios con IVA incluido.</p>
       </div>
     </section>
 
