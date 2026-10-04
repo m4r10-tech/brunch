@@ -452,3 +452,43 @@ h1 .line { display: block; }
   .obrador-photos .ph-tall:last-child { display: none; }
   .ph-down { margin-top: 40px; }
 }
+
+/* Galería horizontal guiada por el scroll */
+.hscroll { position: relative; background: var(--cream); }
+.hscroll-sticky { padding: clamp(72px, 9vw, 110px) 0 clamp(48px, 6vw, 80px); overflow: hidden; }
+.hscroll-head { margin-bottom: 36px; }
+.hscroll-head h2 { margin: 0; }
+.hscroll-track {
+  display: flex; gap: 20px;
+  padding: 0 max(16px, calc((100vw - 1120px) / 2));
+  overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+  will-change: transform;
+}
+.hscroll-track::-webkit-scrollbar { display: none; }
+.hs-item { flex: none; margin: 0; position: relative; height: clamp(320px, 58vh, 560px); border-radius: 16px; overflow: hidden; scroll-snap-align: center; background: var(--cream-2); }
+.hs-wide { aspect-ratio: 3 / 2; }
+.hs-tall { aspect-ratio: 4 / 5; }
+.hs-item img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.04); transition: transform 1.2s cubic-bezier(.2, .7, .2, 1); }
+.hs-item:hover img { transform: scale(1.09); }
+.hs-item figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  display: flex; align-items: baseline; gap: 12px;
+  padding: 56px 22px 18px;
+  background: linear-gradient(0deg, rgba(20, 13, 9, .78), transparent);
+  color: #fff; font-family: var(--serif); font-size: 1.35rem; font-weight: 600; line-height: 1.2;
+}
+.hs-item figcaption span { font-family: var(--sans); font-size: .72rem; font-weight: 600; letter-spacing: .14em; color: #ffc2da; }
+.hs-end {
+  aspect-ratio: 3 / 4; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 18px;
+  padding: 32px; background: var(--brand); color: #fff; text-decoration: none;
+  font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 600; line-height: 1.1;
+  transition: background .3s;
+}
+.hs-end:hover { background: var(--brand-dark); }
+.hs-end svg { width: 44px; height: 44px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; transition: transform .3s; }
+.hs-end:hover svg { transform: translateX(8px); }
+
+/* En escritorio, la galería se desplaza de lado mientras bajas */
+.hscroll.is-pinned .hscroll-sticky { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 72px 0 24px; }
+.hscroll.is-pinned .hscroll-track { overflow: visible; scroll-snap-type: none; }
+@media (max-width: 760px) { .hs-item { height: 380px; } .hs-wide { aspect-ratio: 4 / 5; } }

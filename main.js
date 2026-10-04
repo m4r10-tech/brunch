@@ -160,4 +160,33 @@ if (parallax.length && !reduceMotion) {
   window.addEventListener('resize', update);
 }
 
+// Galería horizontal: en escritorio se fija y avanza de lado con el scroll
+const hs = document.querySelector('.hscroll');
+if (hs && !reduceMotion) {
+  const track = hs.querySelector('.hscroll-track');
+  const desktop = window.matchMedia('(min-width: 901px)');
+  let distance = 0;
+  const layout = () => {
+    if (!desktop.matches) {
+      hs.classList.remove('is-pinned');
+      hs.style.height = '';
+      track.style.transform = '';
+      return;
+    }
+    hs.classList.add('is-pinned');
+    distance = Math.max(0, track.scrollWidth - window.innerWidth);
+    hs.style.height = `${window.innerHeight + distance}px`;
+    move();
+  };
+  const move = () => {
+    if (!hs.classList.contains('is-pinned')) return;
+    const progress = Math.min(Math.max(-hs.getBoundingClientRect().top / (distance || 1), 0), 1);
+    track.style.transform = `translate3d(${(-progress * distance).toFixed(1)}px, 0, 0)`;
+  };
+  layout();
+  window.addEventListener('resize', layout);
+  window.addEventListener('load', layout);
+  window.addEventListener('scroll', () => requestAnimationFrame(move), { passive: true });
+}
+
 document.getElementById('year').textContent = new Date().getFullYear();
