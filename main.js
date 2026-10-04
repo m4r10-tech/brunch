@@ -175,12 +175,12 @@ if (hs && !reduceMotion) {
     }
     hs.classList.add('is-pinned');
     distance = Math.max(0, track.scrollWidth - window.innerWidth);
-    hs.style.height = `${window.innerHeight + distance}px`;
+    hs.style.height = `${window.innerHeight + distance * 0.65}px`;
     move();
   };
   const move = () => {
     if (!hs.classList.contains('is-pinned')) return;
-    const progress = Math.min(Math.max(-hs.getBoundingClientRect().top / (distance || 1), 0), 1);
+    const progress = Math.min(Math.max(-hs.getBoundingClientRect().top / (distance * 0.65 || 1), 0), 1);
     track.style.transform = `translate3d(${(-progress * distance).toFixed(1)}px, 0, 0)`;
   };
   layout();
