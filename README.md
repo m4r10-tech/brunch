@@ -8,7 +8,7 @@ Con internet se cargan las fuentes y el mapa de Google.
 
 ## Datos usados (fuentes públicas)
 - Dirección, teléfono 925 69 00 04 e Instagram @brunchsantotome.
-- Horario: lunes a domingo y festivos, 8:30–21:00 (según la web de contacto del negocio).
+- Horario: lunes a domingo, 8:30–15:30 (Google Maps).
 - Historia desde 1856, apertura del Brunch en 2019, certificación Espiga Barrada, receta del mazapán (57% almendra Marcona).
 - Carta de cafetería (bebidas, combos, bocatines, tostas, flanes, empanadas, helados): carta física del local (fotos de Google Maps).
 - Bollería, tartas, pan y mazapán: tienda online del negocio (mazapansingluten.com), IVA incluido.

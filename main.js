@@ -52,7 +52,7 @@ if ('IntersectionObserver' in window) {
 }
 
 // Abierto / cerrado según la hora de Toledo
-const HORARIO = { abre: 8 * 60 + 30, cierra: 21 * 60 }; // todos los días, festivos incluidos
+const HORARIO = { abre: 8 * 60 + 30, cierra: 15 * 60 + 30 }; // todos los días
 
 function horaToledo() {
   const partes = new Intl.DateTimeFormat('es-ES', {
