@@ -21,7 +21,7 @@ Con internet se cargan las fuentes y el mapa de Google.
 - `assets/og-image.png`: imagen para compartir el enlace.
 
 ## Fotos
-`assets/fotos/` (JPG + WebP optimizados): local, hojaldres, pan, batido, tira de frutas, tortitas, tarta de chocolate, torrijas, galletas, tarta glaseada, mazapán y mazapán surtido.
+`assets/fotos/` (JPG + WebP optimizados): local, hojaldres, pan, batido, tira de frutas, tortitas, tarta de chocolate, torrijas, galletas, tarta glaseada, mazapán, mazapán surtido y mazapán de yema.
 
 ## Funciones
 - Estado *Abierto / Cierra pronto / Cerrado* en tiempo real con la hora de Toledo (`main.js`, constante `HORARIO`).
