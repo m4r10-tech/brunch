@@ -41,7 +41,7 @@ tabs.forEach((tab, i) => {
 });
 
 // Animación al hacer scroll
-const revealables = document.querySelectorAll('.feature, .section-head, .menu-panel, .story > *, .quotes blockquote, .visit > *, .hours-wrap > *');
+const revealables = document.querySelectorAll('.feature, .section-head, .menu-panel, .story > *, .quotes blockquote, .visit > *, .hours-wrap > *, .gift');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

@@ -489,3 +489,18 @@ h1 .line { display: block; }
 .hscroll.is-pinned .hscroll-sticky { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 72px 0 24px; }
 .hscroll.is-pinned .hscroll-track { overflow: visible; scroll-snap-type: none; }
 @media (max-width: 760px) { .hs-item { height: 380px; } .hs-wide { aspect-ratio: 4 / 5; } }
+
+/* Para regalar */
+.gifts-section { background: #fff; }
+.gifts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.gift { display: flex; flex-direction: column; }
+.gift-img { border-radius: 16px; overflow: hidden; background: #f6f5f3; aspect-ratio: 3 / 2; margin-bottom: 18px; }
+.gift-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s cubic-bezier(.2, .7, .2, 1); }
+.gift:hover .gift-img img { transform: scale(1.05); }
+.gift h3 { margin: 0 0 6px; }
+.gift p { color: var(--muted); margin: 0 0 12px; flex: 1; }
+.gift-price { font-weight: 600; color: var(--brand); font-size: .95rem; }
+.gifts-cta { text-align: center; margin-top: 44px; }
+@media (max-width: 900px) { .gifts { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; } }
+.menu-art:has(.fit-contain) { background: #f7f6f4; aspect-ratio: auto; }
+.menu-art img.fit-contain { object-fit: contain; padding: 0; }

@@ -21,7 +21,7 @@ Con internet se cargan las fuentes y el mapa de Google.
 - `assets/og-image.png`: imagen para compartir el enlace.
 
 ## Fotos
-`assets/fotos/` (JPG + WebP optimizados): 21 fotos reales del local y sus productos, cada una usada una sola vez.
+`assets/fotos/` (JPG + WebP optimizados): 24 fotos reales del local y sus productos, cada una usada una sola vez.
 
 ## Funciones
 - Estado *Abierto / Cierra pronto / Cerrado* en tiempo real con la hora de Toledo (`main.js`, constante `HORARIO`).
