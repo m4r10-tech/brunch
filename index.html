@@ -71,29 +71,30 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <a href="#horario" class="status" data-status hidden><span class="status-dot"></span><span class="status-text"></span></a>
-          <p class="eyebrow">Toledo · desde 1856</p>
-          <h1>El sabor de siempre,<br><em>100% sin gluten</em></h1>
-          <p class="lead">
+          <a href="#horario" class="status intro" style="--i:0" data-status hidden><span class="status-dot"></span><span class="status-text"></span></a>
+          <p class="eyebrow intro" style="--i:1">Toledo · desde 1856</p>
+          <h1><span class="line intro" style="--i:2">El sabor de siempre,</span><span class="line intro" style="--i:3"><em>100% sin gluten</em></span></h1>
+          <p class="lead intro" style="--i:4">
             Obrador y cafetería exclusivamente sin gluten de la familia Santo Tomé.
             Desayunos, brunch, bollería, postres y nuestro mazapán artesano,
             elaborados sin riesgo de contaminación cruzada.
           </p>
-          <div class="hero-actions">
+          <div class="hero-actions intro" style="--i:5">
             <a href="#carta" class="btn">Ver la carta</a>
             <a href="tel:+34925690004" class="btn btn-ghost">Llamar · 925 69 00 04</a>
           </div>
-          <ul class="hero-badges">
+          <ul class="hero-badges intro" style="--i:6">
             <li>Obrador propio</li>
             <li>Apto para celíacos</li>
             <li>Abierto todos los días</li>
           </ul>
         </div>
-        <div class="hero-art" aria-hidden="true">
+        <div class="hero-art intro-art" aria-hidden="true">
           <div class="plate">
             <div class="plate-inner">
               <span class="croissant"></span>
               <span class="cup"></span>
+              <span class="steam st1"></span><span class="steam st2"></span><span class="steam st3"></span>
               <span class="marzipan m1"></span>
               <span class="marzipan m2"></span>
               <span class="marzipan m3"></span>
@@ -105,6 +106,13 @@
         </div>
       </div>
     </section>
+
+    <div class="marquee" aria-label="Algunos de nuestros productos">
+      <div class="marquee-track">
+        <div class="marquee-group"><span>Croissant a la plancha</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"><span>Palmera de chocolate</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"><span>Mazapán de Toledo</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"><span>Tosta de jamón ibérico</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"><span>Batidos sin lactosa</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"><span>Tarta red velvet</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"><span>Empanada de pollo</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"><span>Té matcha latte</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"><span>Delicias de mazapán</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"></div>
+        <div class="marquee-group" aria-hidden="true"><span>Croissant a la plancha</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"><span>Palmera de chocolate</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"><span>Mazapán de Toledo</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"><span>Tosta de jamón ibérico</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"><span>Batidos sin lactosa</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"><span>Tarta red velvet</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"><span>Empanada de pollo</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"><span>Té matcha latte</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"><span>Delicias de mazapán</span><img src="assets/logo-mark.svg" alt="" width="22" height="22"></div>
+      </div>
+    </div>
 
     <!-- SIN GLUTEN -->
     <section id="sin-gluten" class="section">
@@ -379,7 +387,7 @@
     <section id="historia" class="section section-alt">
       <div class="container story">
         <div class="story-year" aria-hidden="true">
-          <span>1856</span>
+          <span data-count="1856" data-from="1800">1856</span>
         </div>
         <div>
           <p class="eyebrow">Siete generaciones de oficio</p>
@@ -411,7 +419,7 @@
         </header>
         <div class="rating">
           <div class="rating-score">
-            <strong>4,6</strong>
+            <strong data-count="4.6" data-decimals="1">4,6</strong>
             <span class="stars" aria-label="4,6 de 5 estrellas">★★★★★</span>
             <small>Más de 400 opiniones en Google</small>
           </div>

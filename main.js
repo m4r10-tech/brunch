@@ -20,7 +20,13 @@ function selectTab(tab) {
     const selected = t === tab;
     t.setAttribute('aria-selected', String(selected));
     t.tabIndex = selected ? 0 : -1;
-    document.getElementById(t.getAttribute('aria-controls')).hidden = !selected;
+    const panel = document.getElementById(t.getAttribute('aria-controls'));
+    panel.hidden = !selected;
+    panel.classList.remove('enter');
+    if (selected) {
+      void panel.offsetWidth; // reinicia la animación
+      panel.classList.add('enter', 'visible');
+    }
   });
 }
 tabs.forEach((tab, i) => {
@@ -99,5 +105,38 @@ function actualizarEstado() {
 }
 actualizarEstado();
 setInterval(actualizarEstado, 30 * 1000);
+
+// Cabecera compacta al hacer scroll
+const header = document.querySelector('.site-header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 12);
+onScroll();
+window.addEventListener('scroll', onScroll, { passive: true });
+
+// Contadores (1856, 4,6) que se animan al aparecer
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const counters = document.querySelectorAll('[data-count]');
+if ('IntersectionObserver' in window && !reduceMotion) {
+  const fmtNum = (n, d) => n.toLocaleString('es-ES', { minimumFractionDigits: d, maximumFractionDigits: d, useGrouping: false });
+  const co = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      co.unobserve(el);
+      const to = Number(el.dataset.count);
+      const from = Number(el.dataset.from || 0);
+      const d = Number(el.dataset.decimals || 0);
+      const start = performance.now();
+      const dur = 1400;
+      const tick = (now) => {
+        const t = Math.min((now - start) / dur, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        el.textContent = fmtNum(from + (to - from) * eased, d);
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: 0.6 });
+  counters.forEach((el) => co.observe(el));
+}
 
 document.getElementById('year').textContent = new Date().getFullYear();
