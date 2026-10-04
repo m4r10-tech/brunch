@@ -13,27 +13,8 @@ menu.querySelectorAll('a').forEach((a) =>
   })
 );
 
-// Pestañas de la carta
-const tabs = [...document.querySelectorAll('[role="tab"]')];
-function selectTab(tab) {
-  tabs.forEach((t) => {
-    const selected = t === tab;
-    t.setAttribute('aria-selected', String(selected));
-    t.tabIndex = selected ? 0 : -1;
-    document.getElementById(t.getAttribute('aria-controls')).hidden = !selected;
-  });
-  tab.focus();
-}
-tabs.forEach((tab, i) => {
-  tab.addEventListener('click', () => selectTab(tab));
-  tab.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') selectTab(tabs[(i + 1) % tabs.length]);
-    if (e.key === 'ArrowLeft') selectTab(tabs[(i - 1 + tabs.length) % tabs.length]);
-  });
-});
-
 // Animación al hacer scroll
-const revealables = document.querySelectorAll('.feature, .section-head, .tab-panel, .story > *, .ph, .visit > *');
+const revealables = document.querySelectorAll('.feature, .section-head, .menu-card, .story > *, .quotes blockquote, .visit > *');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

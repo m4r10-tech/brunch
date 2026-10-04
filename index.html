@@ -18,6 +18,7 @@
     "name": "Brunch Confitería Santo Tomé",
     "description": "Obrador y cafetería 100% sin gluten en Toledo.",
     "telephone": "+34 925 69 00 04",
+    "openingHours": "Mo-Su 08:30-21:00",
     "servesCuisine": ["Sin gluten", "Confitería", "Brunch"],
     "address": {
       "@type": "PostalAddress",
@@ -30,11 +31,6 @@
   </script>
 </head>
 <body>
-
-  <!-- Aviso de maqueta: borrar este bloque cuando se entregue la web -->
-  <div class="demo-ribbon" role="note">
-    Propuesta de diseño · maqueta de demostración
-  </div>
 
   <header class="site-header" id="top">
     <div class="container nav">
@@ -52,7 +48,7 @@
         <a href="#sin-gluten">Sin gluten</a>
         <a href="#carta">Carta</a>
         <a href="#historia">Historia</a>
-        <a href="#galeria">Galería</a>
+        <a href="#opiniones">Opiniones</a>
         <a href="#visitanos" class="btn btn-small">Visítanos</a>
       </nav>
     </div>
@@ -67,7 +63,7 @@
           <h1>El sabor de siempre,<br><em>100% sin gluten</em></h1>
           <p class="lead">
             Obrador y cafetería exclusivamente sin gluten de la familia Santo Tomé.
-            Desayunos, brunch, bollería, tartas y nuestro mazapán artesano,
+            Desayunos, brunch, bollería, postres y nuestro mazapán artesano,
             elaborados sin riesgo de contaminación cruzada.
           </p>
           <div class="hero-actions">
@@ -77,7 +73,7 @@
           <ul class="hero-badges">
             <li>Obrador propio</li>
             <li>Apto para celíacos</li>
-            <li>Mazapán certificado</li>
+            <li>Abierto todos los días</li>
           </ul>
         </div>
         <div class="hero-art" aria-hidden="true">
@@ -106,7 +102,8 @@
           <p>
             En 2019 abrimos Brunch Santo Tomé como un espacio gastronómico dedicado por
             completo a la elaboración sin gluten. Fuimos pioneros en elaborar mazapán
-            certificado sin gluten, y hoy todo lo que sale de nuestro obrador lo es.
+            certificado sin gluten: el primer obrador de España con la certificación
+            <strong>Espiga Barrada</strong>. Hoy todo lo que sale de nuestro obrador es sin gluten.
           </p>
         </header>
         <div class="features">
@@ -121,8 +118,8 @@
             <div class="icon" aria-hidden="true">
               <svg viewBox="0 0 48 48"><circle cx="24" cy="20" r="12"/><path d="M18 30l-4 14 10-5 10 5-4-14"/><path d="M19 20l4 4 7-8"/></svg>
             </div>
-            <h3>Mazapán certificado</h3>
-            <p>La receta tradicional toledana, con almendra y azúcar, certificada sin gluten.</p>
+            <h3>Certificado Espiga Barrada</h3>
+            <p>Nuestro mazapán de siempre: 57% almendra Marcona, azúcar y un toque de miel. Certificado sin gluten.</p>
           </article>
           <article class="feature">
             <div class="icon" aria-hidden="true">
@@ -141,51 +138,91 @@
         <header class="section-head">
           <p class="eyebrow">Hecho cada día en nuestro obrador</p>
           <h2>Nuestra carta</h2>
-          <p>Todo sin gluten. Pregunta en barra por las especialidades del día.</p>
+          <p>Todo sin gluten, de lo dulce a lo salado. Pregunta en barra por las especialidades del día.</p>
         </header>
 
-        <div class="tabs" role="tablist" aria-label="Categorías de la carta">
-          <button role="tab" aria-selected="true" aria-controls="tab-desayunos" id="t-desayunos">Desayunos y brunch</button>
-          <button role="tab" aria-selected="false" aria-controls="tab-dulce" id="t-dulce" tabindex="-1">Bollería y tartas</button>
-          <button role="tab" aria-selected="false" aria-controls="tab-mazapan" id="t-mazapan" tabindex="-1">Mazapán y chocolate</button>
-          <button role="tab" aria-selected="false" aria-controls="tab-salado" id="t-salado" tabindex="-1">Salado</button>
-        </div>
+        <div class="menu-grid">
+          <article class="menu-card">
+            <div class="menu-art" aria-hidden="true">
+              <svg viewBox="0 0 160 120">
+                <ellipse cx="80" cy="96" rx="64" ry="12" fill="#e8d3b0"/>
+                <path d="M44 52h52v22a24 24 0 0 1-24 24h-4a24 24 0 0 1-24-24z" fill="#fff" stroke="#3b2a1e" stroke-width="3"/>
+                <path d="M96 58h6a10 10 0 0 1 0 20h-8" fill="none" stroke="#3b2a1e" stroke-width="3"/>
+                <ellipse cx="70" cy="54" rx="24" ry="5" fill="#6b4128"/>
+                <path d="M60 40c-4-6 4-8 0-14M74 40c-4-6 4-8 0-14" fill="none" stroke="#c08a3e" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M104 92c4-16 18-26 34-22-2 14-16 26-34 22z" fill="#d9963f"/>
+                <path d="M112 86l8-10M120 88l6-10M128 86l4-8" stroke="#a8682a" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Desayunos</h3>
+            <ul>
+              <li>Café, chocolate e infusiones</li>
+              <li>Batidos</li>
+              <li>Tostadas con pan sin gluten</li>
+              <li>Croissants y napolitanas recién hechos</li>
+            </ul>
+          </article>
 
-        <div class="tab-panel" role="tabpanel" id="tab-desayunos" aria-labelledby="t-desayunos">
-          <ul class="menu-list">
-            <li><span>Tostadas de pan sin gluten</span><small>Con tomate y aceite, mantequilla y mermelada o jamón</small></li>
-            <li><span>Croissant y napolitanas</span><small>Recién horneados en nuestro obrador</small></li>
-            <li><span>Brunch completo</span><small>Bebida caliente, zumo, plato salado y un dulce a elegir</small></li>
-            <li><span>Café, chocolate e infusiones</span><small>Con opción de bebida vegetal</small></li>
-            <li><span>Zumo natural</span><small>Naranja exprimida al momento</small></li>
-          </ul>
-        </div>
-        <div class="tab-panel" role="tabpanel" id="tab-dulce" aria-labelledby="t-dulce" hidden>
-          <ul class="menu-list">
-            <li><span>Bollería variada</span><small>Magdalenas, bizcochos y bollos de temporada</small></li>
-            <li><span>Tartas por porción</span><small>Y por encargo para celebraciones</small></li>
-            <li><span>Galletas y pastas</span><small>Perfectas para llevar o regalar</small></li>
-            <li><span>Torrijas</span><small>En temporada de Semana Santa</small></li>
-          </ul>
-        </div>
-        <div class="tab-panel" role="tabpanel" id="tab-mazapan" aria-labelledby="t-mazapan" hidden>
-          <ul class="menu-list">
-            <li><span>Figuritas de mazapán</span><small>La receta toledana de la casa, certificada sin gluten</small></li>
-            <li><span>Anguila de mazapán</span><small>El clásico navideño de Toledo</small></li>
-            <li><span>Cajas de regalo</span><small>Surtidos para llevar a casa</small></li>
-            <li><span>Chocolate artesano</span><small>Bombones y tabletas</small></li>
-          </ul>
-        </div>
-        <div class="tab-panel" role="tabpanel" id="tab-salado" aria-labelledby="t-salado" hidden>
-          <ul class="menu-list">
-            <li><span>Sándwiches y bocadillos</span><small>Con pan sin gluten de elaboración propia</small></li>
-            <li><span>Empanadas</span><small>Masa casera, rellenos variados</small></li>
-            <li><span>Ensaladas</span><small>Frescas, para comer ligero</small></li>
-            <li><span>Pan sin gluten para llevar</span><small>Barras y hogazas</small></li>
-          </ul>
-        </div>
+          <article class="menu-card">
+            <div class="menu-art" aria-hidden="true">
+              <svg viewBox="0 0 160 120">
+                <ellipse cx="80" cy="96" rx="64" ry="12" fill="#e8d3b0"/>
+                <path d="M80 92C50 92 36 72 44 54c6-14 26-16 34-4 8-12 28-10 34 4 8 18-6 38-32 38z" fill="#e2a95a"/>
+                <path d="M80 92C56 92 46 76 52 62c4-10 18-10 24-2l4 6 4-6c6-8 20-8 24 2 6 14-4 30-28 30z" fill="none" stroke="#b9772e" stroke-width="2.5"/>
+                <path d="M80 92C50 92 36 72 44 54c6-14 26-16 34-4 8-12 28-10 34 4 8 18-6 38-32 38z" fill="#5a3320" opacity=".85" clip-path="inset(0 0 55% 0)"/>
+                <path d="M46 52c10-8 24-6 32 0M82 50c10-6 22-6 30 2" fill="none" stroke="#3b2a1e" stroke-width="5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Bollería y postres</h3>
+            <ul>
+              <li>Palmeras de chocolate</li>
+              <li>Hojaldre crujiente, por capas</li>
+              <li>Pastas y mantecados de canela</li>
+              <li>Torrijas en temporada</li>
+            </ul>
+          </article>
 
-        <p class="note">* Carta orientativa. Precios y productos a confirmar con el establecimiento.</p>
+          <article class="menu-card">
+            <div class="menu-art" aria-hidden="true">
+              <svg viewBox="0 0 160 120">
+                <ellipse cx="80" cy="96" rx="64" ry="12" fill="#e8d3b0"/>
+                <path d="M30 88c10-30 40-40 60-30 14 7 28 4 40-6-2 24-26 40-56 40-16 0-30-2-44-4z" fill="#f2d39e"/>
+                <path d="M30 88c10-30 40-40 60-30 14 7 28 4 40-6" fill="none" stroke="#c99550" stroke-width="2.5"/>
+                <circle cx="124" cy="52" r="2.5" fill="#3b2a1e"/>
+                <path d="M46 78l6 4M60 70l6 4M76 66l6 4M92 68l6 4" stroke="#c99550" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="52" cy="50" r="10" fill="#f2d39e" stroke="#c99550" stroke-width="2"/>
+                <circle cx="76" cy="40" r="8" fill="#f2d39e" stroke="#c99550" stroke-width="2"/>
+                <circle cx="49" cy="47" r="1.5" fill="#c99550"/><circle cx="55" cy="47" r="1.5" fill="#c99550"/>
+              </svg>
+            </div>
+            <h3>Mazapán</h3>
+            <ul>
+              <li>Mazapán surtido y figuritas</li>
+              <li>Mazapanes de piñones</li>
+              <li>Rellenos de yema y cabello de ángel</li>
+              <li>Anguilas de mazapán para Navidad</li>
+            </ul>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-art" aria-hidden="true">
+              <svg viewBox="0 0 160 120">
+                <ellipse cx="80" cy="96" rx="64" ry="12" fill="#e8d3b0"/>
+                <path d="M32 88a48 48 0 0 1 96 0z" fill="#dda25a"/>
+                <path d="M32 88a48 48 0 0 1 96 0" fill="none" stroke="#a8682a" stroke-width="3"/>
+                <path d="M36 88q6-6 12 0t12 0 12 0 12 0 12 0 12 0 12 0 8 0" fill="none" stroke="#a8682a" stroke-width="3" stroke-linecap="round"/>
+                <path d="M60 62l8 6M78 54l8 6M96 62l8 6" stroke="#a8682a" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Salado</h3>
+            <ul>
+              <li>Empanadas caseras</li>
+              <li>Sándwiches</li>
+              <li>Ensaladas</li>
+              <li>Pan sin gluten para llevar</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -216,20 +253,29 @@
       </div>
     </section>
 
-    <!-- GALERÍA -->
-    <section id="galeria" class="section section-alt">
+    <!-- OPINIONES -->
+    <section id="opiniones" class="section section-alt">
       <div class="container">
         <header class="section-head">
-          <p class="eyebrow">Pasa y mira</p>
-          <h2>Galería</h2>
+          <p class="eyebrow">Lo que dicen nuestros clientes</p>
+          <h2>Un paraíso sin gluten en Toledo</h2>
         </header>
-        <!-- Sustituir cada .ph por una <img> con fotos reales del local -->
-        <div class="gallery">
-          <figure class="ph ph-1"><figcaption>El local</figcaption></figure>
-          <figure class="ph ph-2"><figcaption>Mostrador</figcaption></figure>
-          <figure class="ph ph-3"><figcaption>Mazapán</figcaption></figure>
-          <figure class="ph ph-4"><figcaption>Brunch</figcaption></figure>
-          <figure class="ph ph-5"><figcaption>Tartas</figcaption></figure>
+        <div class="rating">
+          <div class="rating-score">
+            <strong>4,6</strong>
+            <span class="stars" aria-label="4,6 de 5 estrellas">★★★★★</span>
+            <small>Más de 400 opiniones en Google</small>
+          </div>
+        </div>
+        <div class="quotes">
+          <blockquote>
+            <p>“El hojaldre está muy bien conseguido, se notan las capas y queda muy crujiente. El chocolate es una pasada.”</p>
+            <cite>Opinión de cliente</cite>
+          </blockquote>
+          <blockquote>
+            <p>“Paraíso sin gluten en Toledo.”</p>
+            <cite>Opinión en Tripadvisor</cite>
+          </blockquote>
         </div>
         <p class="note center">Síguenos en Instagram: <a href="https://www.instagram.com/brunchsantotome/" target="_blank" rel="noopener">@brunchsantotome</a></p>
       </div>
@@ -248,13 +294,12 @@
             <dd><a href="tel:+34925690004">925 69 00 04</a></dd>
             <dt>Horario</dt>
             <dd class="hours">
-              <!-- Confirmar el horario real con el local -->
-              <span>Lunes a domingo</span><span>Consultar</span>
+              <span>Lunes a domingo y festivos</span><span>8:30 – 21:00</span>
             </dd>
           </dl>
           <div class="hero-actions">
             <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Brunch+Confiteria+Santo+Tome+Av.+de+Irlanda+3+Toledo" target="_blank" rel="noopener">Cómo llegar</a>
-            <a class="btn btn-ghost" href="tel:+34925690004">Encargar una tarta</a>
+            <a class="btn btn-ghost" href="tel:+34925690004">Hacer un encargo</a>
           </div>
         </div>
         <div class="map">
