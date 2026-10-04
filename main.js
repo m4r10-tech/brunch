@@ -139,4 +139,25 @@ if ('IntersectionObserver' in window && !reduceMotion) {
   counters.forEach((el) => co.observe(el));
 }
 
+// Parallax suave: cada [data-speed] se desplaza según su posición en pantalla
+const parallax = [...document.querySelectorAll('[data-speed]')];
+if (parallax.length && !reduceMotion) {
+  let ticking = false;
+  const update = () => {
+    const vh = window.innerHeight;
+    parallax.forEach((el) => {
+      const r = el.parentElement.getBoundingClientRect();
+      if (r.bottom < -200 || r.top > vh + 200) return;
+      const offset = (r.top + r.height / 2 - vh / 2) * Number(el.dataset.speed);
+      el.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
+    });
+    ticking = false;
+  };
+  update();
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  window.addEventListener('resize', update);
+}
+
 document.getElementById('year').textContent = new Date().getFullYear();

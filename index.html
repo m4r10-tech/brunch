@@ -69,6 +69,9 @@
   <main>
     <!-- HERO -->
     <section class="hero">
+      <div class="hero-media" data-speed="0.25">
+        <picture><source srcset="assets/fotos/local.webp" type="image/webp"><img src="assets/fotos/local.jpg" alt="Interior de Brunch Santo Tomé: mesas, techo de madera y el obrador acristalado al fondo" class="" fetchpriority="high" width="2000" height="1335"></picture>
+      </div>
       <div class="container hero-grid">
         <div class="hero-copy">
           <a href="#horario" class="status intro" style="--i:0" data-status hidden><span class="status-dot"></span><span class="status-text"></span></a>
@@ -81,28 +84,13 @@
           </p>
           <div class="hero-actions intro" style="--i:5">
             <a href="#carta" class="btn">Ver la carta</a>
-            <a href="tel:+34925690004" class="btn btn-ghost">Llamar · 925 69 00 04</a>
+            <a href="tel:+34925690004" class="btn btn-light">Llamar · 925 69 00 04</a>
           </div>
           <ul class="hero-badges intro" style="--i:6">
             <li>Obrador propio</li>
             <li>Apto para celíacos</li>
             <li>Abierto todos los días</li>
           </ul>
-        </div>
-        <div class="hero-art intro-art" aria-hidden="true">
-          <div class="plate">
-            <div class="plate-inner">
-              <span class="croissant"></span>
-              <span class="cup"></span>
-              <span class="steam st1"></span><span class="steam st2"></span><span class="steam st3"></span>
-              <span class="marzipan m1"></span>
-              <span class="marzipan m2"></span>
-              <span class="marzipan m3"></span>
-            </div>
-          </div>
-          <div class="stamp">
-            <span>Sin<br>gluten</span>
-          </div>
         </div>
       </div>
     </section>
@@ -149,6 +137,23 @@
             <h3>Cafetería y brunch</h3>
             <p>Siéntate a desayunar sin preocuparte: dulce, salado y buen café en un local tranquilo.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBRADOR -->
+    <section id="obrador" class="obrador">
+      <div class="container obrador-grid">
+        <div class="obrador-copy">
+          <p class="eyebrow">Nuestro obrador</p>
+          <h2>Del horno<br>a tu mesa</h2>
+          <p>El obrador está a la vista, detrás del cristal. Ahí se hornean el pan, el hojaldre y la bollería que luego sirves en la cafetería o te llevas a casa.</p>
+          <a href="#carta" class="btn btn-light">Ver lo que hacemos</a>
+        </div>
+        <div class="obrador-photos">
+          <figure class="ph-tall" data-speed="-0.06"><picture><source srcset="assets/fotos/hojaldres.webp" type="image/webp"><img src="assets/fotos/hojaldres.jpg" alt="Hojaldres con fideos de chocolate y con coco recién horneados" class="" loading="lazy" width="1100" height="1374"></picture><figcaption>Hojaldre recién horneado</figcaption></figure>
+          <figure class="ph-tall ph-down" data-speed="0.08"><picture><source srcset="assets/fotos/pan.webp" type="image/webp"><img src="assets/fotos/pan.jpg" alt="Bandeja de madera con barras de pan sin gluten" class="" loading="lazy" width="1100" height="1375"></picture><figcaption>Pan sin gluten, cada día</figcaption></figure>
+          <figure class="ph-tall" data-speed="-0.03"><picture><source srcset="assets/fotos/batido.webp" type="image/webp"><img src="assets/fotos/batido.jpg" alt="Batido de chocolate junto a la carta de Santo Tomé" class="" loading="lazy" width="1100" height="1374"></picture><figcaption>Batidos en cafetería</figcaption></figure>
         </div>
       </div>
     </section>
@@ -354,6 +359,19 @@
           </div>
         </div>
         <p class="menu-foot">Todos los precios con IVA incluido.</p>
+      </div>
+    </section>
+
+    <!-- ENCARGOS -->
+    <section class="band" aria-label="Tartas por encargo">
+      <div class="band-media" data-speed="0.18">
+        <picture><source srcset="assets/fotos/tira-frutas.webp" type="image/webp"><img src="assets/fotos/tira-frutas.jpg" alt="Tira de hojaldre con fresas, kiwi, melocotón y frutos rojos" class="" loading="lazy" width="1800" height="1198"></picture>
+      </div>
+      <div class="container band-copy">
+        <p class="eyebrow">Por encargo</p>
+        <h2>¿Una celebración?<br>Nosotros ponemos la tarta.</h2>
+        <p>Tartas de nata, San Marcos, red velvet o tiras de hojaldre con fruta, sin gluten y en tamaño para 4–6 o 6–8 personas.</p>
+        <a class="btn btn-wa" href="https://wa.me/34925690004?text=Hola%2C%20quer%C3%ADa%20encargar%20una%20tarta." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Encargar por WhatsApp</a>
       </div>
     </section>
 

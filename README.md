@@ -20,6 +20,9 @@ Con internet se cargan las fuentes y el mapa de Google.
 - `favicon.ico`, `assets/apple-touch-icon.png`, `assets/icon-192.png`, `assets/icon-512.png`, `site.webmanifest`.
 - `assets/og-image.png`: imagen para compartir el enlace.
 
+## Fotos
+`assets/fotos/` (JPG + WebP optimizados): local, hojaldres, pan, batido, tira de frutas.
+
 ## Funciones
 - Estado *Abierto / Cierra pronto / Cerrado* en tiempo real con la hora de Toledo (`main.js`, constante `HORARIO`).
 - Botón flotante de WhatsApp y botones de encargo (`wa.me/34925690004`).
